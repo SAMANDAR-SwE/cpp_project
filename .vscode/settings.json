@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "cmath": "cpp",
+        "ostream": "cpp",
+        "random": "cpp"
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": [],
+    "cmake.sourceDirectory": "/home/samandar/CLionProjects/cpp_hello/c++/cpp_hello"
+}
