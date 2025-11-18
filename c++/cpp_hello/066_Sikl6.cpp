@@ -7,7 +7,7 @@ int main(){
     cin >> n >> x;
     for ( int i = 1; i <= n; i++ )
         {
-            pow()
+            S += pow(-1, (n - 1)) * ( sin( n * x) / n );
         }
-    
+    printf("%.2f\n", S);
 }

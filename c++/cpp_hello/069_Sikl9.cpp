@@ -24,7 +24,7 @@ int main(){
 
     do {
         S += (pow((-1), (k-1) ) * pow( ( x - 1 ), k )) / k;   
-        k ++;  9
+        k ++;  9;
         cout << S;
     }
     while (k < n);
