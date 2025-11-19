@@ -3,12 +3,12 @@
 using namespace std;
 
 int main(){
-    double x, i, P = 1;
+    double x, i, P = 0;
     int n = 1;
     cin >> i >> x;
     while (n <= i)
         {
-            P *= ( pow( ( -1 ), n ) * pow( x , ( 2 * n ) ) ) / n;
+            P += 1 + ( pow( ( -1 ), n ) * pow( x , ( 2 * n ) ) ) / n;
             n ++;
         }
     printf("%.2f\n", P);

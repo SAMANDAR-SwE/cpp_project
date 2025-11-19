@@ -8,7 +8,7 @@ int main(){
     cin >> x >> i;
     while ( n <= i)
     {
-        S += pow(-1, n ) * pow(x, (2 * n));
+        S +=1 + pow(-1, n ) * pow(x, (2 * n));
         n ++;
     }
     printf("%.2f\n", S);

@@ -20,7 +20,7 @@ int main(){
     cin >> i >> x;
     for (int n = 0; n <= i; n++)
         {
-            S += pow(x, n) / factorial(n);
+            S +=1 + pow(x, n) / factorial(n);
         }
     printf("%.2f\n", S);
 }
