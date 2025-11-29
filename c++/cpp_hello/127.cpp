@@ -26,13 +26,10 @@ int main(){
             cout << list[count] << " " ;
 
         }
-    }
-
-    for (count = 0; count < n_son; count++){
         cout << list[count] << " " ;
-
-        
     }
+
+    
     
     
     
