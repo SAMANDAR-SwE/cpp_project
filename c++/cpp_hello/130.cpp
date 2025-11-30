@@ -5,16 +5,21 @@ using namespace std;
 int main() {
     int n_son, count;
     cin >> n_son;
-    vector<double> list(n_son);
+    double list[n_son];
 
     for (count = 0; count < n_son; count++){
         cin >> list[count];
     
     }
-
+    double max = list[count];
     for (count = 0; count < n_son; count++){
-    
-        cout << list[count] << " ";
+        if (list[count] > max){
+            max  = list[count];
+        }
+            
+    }
+    for (count = 0; count < n_son; count++){
+        printf("%.2f\n" , (list[count] / max)); 
     
     }
     
