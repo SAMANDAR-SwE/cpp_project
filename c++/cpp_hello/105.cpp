@@ -14,16 +14,19 @@ int main() {
     int a, b;
     cin >> a >> b;  
     double sum_a_b = 0,Summa = 0;
-    for (count = 0; count < a; count++){
-        Summa += list[count];
-        sum_a_b ++;    
+    for (count = 0; count < n_son; count++){
+        if (count < a-1) {
+            Summa += list[count];
+            sum_a_b ++;
+            
+        }
+        else if ( count >= b){
+            Summa += list[count];
+            sum_a_b ++;
+        }   
         
     }
-    for (count = b+1; count <= n_son; count++){
-        Summa += list[count];  
-        sum_a_b ++;
-        
-    }
-    cout << Summa / sum_a_b << endl;
+    
+    printf("%.2f", (Summa / sum_a_b));
         
 }
