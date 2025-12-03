@@ -14,9 +14,7 @@ int main() {
     double sum = 0;
     for (count = 0; count < n_son; count++){
         if(list[count] % 2 == 0 || list[count] % 3 == 0 || list[count] % 5 == 0) {
-            sum += list[count];
-    
-        
+            sum += list[count];       
         }
     }
     printf("%.0f\n", sum); 
