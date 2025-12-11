@@ -24,16 +24,11 @@ int main() {
     int a, b;
     cin >> a >> b;
 
-    // 1-indeksdan 0-indeksga
-    a--;
-    b--;
-
-    // [a,b] oraliqdagilarni bo‘lish
+    
     for (int i = a; i <= b; i++) {
         arr[i] /= min;
     }
 
-    // Natijani chiqarish (0.1 aniqlikda)
     cout << fixed << setprecision(1);
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
