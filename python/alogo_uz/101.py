@@ -1,10 +1,14 @@
-# Massiv uzunligini olish
-n = int(input("n = "))
+n = int(input())
 
-# Massiv elementlarini olish
 list = list(map(int, input("Massiv elementlari: ").split()))
-orta_summa = 0
-for element in a:
-    orta_summa += element 
+summa = 0
+for count in list:
+    summa += count
+summa_kichik = 0
+n_son = 0
+for count1 in list:
+    if (summa / n) > count1:
+        summa_kichik += count1
+        n_son += 1
 
-for 
+print("%.2f" % (summa_kichik / n_son))

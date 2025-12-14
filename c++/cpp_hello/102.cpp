@@ -6,7 +6,7 @@ int main() {
     int n;
     cin >> n;
 
-    double arr[100];
+    double arr[n];
 
     // Massivni kiritish
     for (int i = 0; i < n; i++) {
