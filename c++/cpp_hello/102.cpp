@@ -20,7 +20,7 @@ int main() {
             min = arr[i];
         }
     }
-
+    
     int a, b;
     cin >> a >> b;
 
