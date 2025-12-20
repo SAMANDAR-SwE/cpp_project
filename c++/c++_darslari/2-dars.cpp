@@ -1,22 +1,17 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    int kun;
-    cin >> kun;
-
-    switch (kun) {
-        case 1:
-            cout << "Dushanba";
-            break;
-        case 2:
-            cout << "Seshanba";
-            break;
-        case 3:
-            cout << "Chorshanba";
-            break;
-        default:
-            cout << "Noto‘g‘ri son";
+    string matn;
+    cout << "Matn kiriting: ";
+    cin >> matn;
+    
+    
+    for (int i = 0; i < matn.length(); i++) {
+        cout << matn[i] << ": "<< int(matn[i]) << " " << endl;
+         
     }
+
     return 0;
 }

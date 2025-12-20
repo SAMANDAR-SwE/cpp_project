@@ -1,16 +1,28 @@
 #include <iostream>
-#include <math.h>
-
+#include <string>
 using namespace std;
 
-int main(){
-    double a, b, c;
-    cin >> a >> b >> c;
+int main() {
+    string ism, familyasi;
+    int age, phone;
 
-    double p = (a + b + c) / 2;
+    cout << "Familyangizni kiriting: ";
+    cin >> familyasi;   
 
-    printf("%.2f", p);
+    cout << "Ismingizni kiriting: ";
+    cin >> ism;
 
-   
+    cout << "Yoshingizni kiriting: ";
+    cin >> age;
+
+    cout << "Telefon raqamni kiriting: ";
+    cin >> phone;
+
+    cout << "Sizning ma'lumotlaringiz:" << endl;
+    cout << ism << endl;
+    cout << familyasi << endl;
+    cout << age << endl;
+    cout << phone << endl;
+
+    return 0;
 }
-
