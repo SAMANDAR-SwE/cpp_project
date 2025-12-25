@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.0)
-project(cpp_hello)
+cmake_minimum_required(VERSION 3.16)
 
-set(CMAKE_CXX_STANDARD 20)
+project(single_project LANGUAGES CXX)
 
-add_executable(cpp_hello main.cpp)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(main new_cpp.cpp)

@@ -9,5 +9,5 @@
     },
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": [],
-    "cmake.sourceDirectory": "/home/samandar/CLionProjects/cpp_hello/c++/cpp_hello"
+    "cmake.sourceDirectory": "/home/samandar/Documents/cpp_project/c++/cpp_hello"
 }
