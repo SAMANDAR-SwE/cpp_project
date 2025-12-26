@@ -12,14 +12,22 @@ int main() {
     
     }
     
-    double min = list[0];
-    for (count = 0; count < n_son; count++){
-        if (list[count] < min){
-            min = list[count];
+    int min_idx = 0;
+    for (count = 1; count < n_son; count++){
+        if (list[count] < list[min_idx]){
+            min_idx = count;            
         }
-    cout << min << " ";
-            
+    
     }
+    for (count = 0; count < n_son; count++){
+        if (list[count] == list[min_idx]){
+            if (count == n_son){
+                list[count] = list[min_idx];
+            }
+        }
+    
+    }
+    
     
 
     
