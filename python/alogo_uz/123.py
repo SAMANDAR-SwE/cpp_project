@@ -1,50 +1,22 @@
-import psycopg2
-from psycopg2 import Error
+# Elementlar sonini o'qiymiz
+n = int(input())
 
-try:
-    # Bog'lanish
-    connection = psycopg2.connect(
-        dbname="test_db",
-        user="postgres",
-        password="SIZNING_PAROLINGIZ",   # ← Bu yerni o'zgartiring!
-        host="localhost",
-        port="5432"
-    )
+# Massivni o'qiymiz va uni ro'yxatga aylantiramiz
+a = list(map(int, input().split()))
 
-    print("✅ Muvaffaqiyatli ulandi!")
+# 1. Juft o'rinli elementlar yig'indisini hisoblaymiz (index 0, 2, 4...)
+summa = sum(a[0::2])
 
-    # Jadval yaratish (faqat bir marta kerak)
-    cursor = connection.cursor()
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS users (
-            id     SERIAL PRIMARY KEY,
-            ism    VARCHAR(100) NOT NULL,
-            yosh   INTEGER,
-            shahar VARCHAR(100)
-        );
-    """)
+# 2. Har bir elementni tekshiramiz va natijani shakllantiramiz
+result = []
+for i in range(n):
+    if a[i] % 2 != 0: # Agar element toq bo'lsa
+        # Yig'indiga bo'lamiz va 10^-2 (0.01) aniqlikda chiqaramiz
+        res = a[i] / summa
+        result.append(f"{res:.2f}")
+    else:
+        # Agar element juft bo'lsa, uni o'zini chiqaramiz (shartga ko'ra)
+        result.append(f"{a[i]:.2f}")
 
-    print("Users jadvali mavjud yoki yaratildi")
-
-    # Test uchun ma'lumot qo'shish
-    ism = input("Ism kiriting: ")
-    yosh = int(input("Yosh kiriting: "))
-    shahar = input("Shahar kiriting: ")
-
-    cursor.execute(
-        "INSERT INTO users (ism, yosh, shahar) VALUES (%s, %s, %s)",
-        (ism, yosh, shahar)
-    )
-
-    connection.commit()
-    print("Ma'lumot muvaffaqiyatli saqlandi! ✓")
-
-except Error as e:
-    print("Xatolik yuz berdi:")
-    print(e)
-
-finally:
-    if connection:
-        cursor.close()
-        connection.close()
-        print("Ulanish yopildi")
+# Natijani bitta qatorda chop etish
+print(*(result))
